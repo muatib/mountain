@@ -164,6 +164,54 @@ header .nav-right li:hover {
   transform: scale(1.3);
 }
 
+@media screen and (max-width: 950px) {
+  header nav {
+    width: 95%;
+  }
+  header .header-content h1 {
+    font-size: 3rem;
+  }
+  header .header-content p {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  header nav .nav-left {
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav .nav-left li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    height: auto;
+  }
+  header nav .nav-right {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 25px;
+  }
+  header .header-content h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .header-content h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+  header .header-content span {
+    height: 50px;
+    width: 50px;
+  }
+}
 main {
   width: 85%;
   margin: 0 auto 30px;
@@ -246,6 +294,55 @@ main .section2 .left-part {
   border-right: 1px solid rgb(209, 209, 209);
 }
 
+@media screen and (max-width: 950px) {
+  main {
+    width: 95%;
+  }
+  main .section1 {
+    width: 90%;
+  }
+  main .section1 h2 {
+    font-size: 2.5rem;
+  }
+  main .section1 p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .section1 {
+    width: 95%;
+  }
+  main .section1 span:before, main .section1 span:after {
+    width: 25%;
+  }
+  main .section1 h2 {
+    font-size: 2rem;
+  }
+  main .section1 p {
+    width: 90%;
+  }
+  main .section2 {
+    grid-template-columns: 1fr;
+  }
+  main .section2 .left-part {
+    border-right: none;
+    border-bottom: 1px solid rgb(209, 209, 209);
+  }
+  main .section2 .left-part, main .section2 .right-part {
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .section1 span {
+    padding: 40px 0;
+  }
+  main .section1 span:before, main .section1 span:after {
+    width: 20%;
+  }
+  main .section1 h2 {
+    font-size: 1.8rem;
+  }
+}
 footer {
   background: rgb(233, 233, 233);
   min-height: 640px;
@@ -325,105 +422,26 @@ footer .infos-contact .social ul li {
   justify-content: center;
 }
 
-@media screen and (max-width: 1100px) {
-  body {
-    max-width: 100%;
-  }
-  main, footer {
+@media screen and (max-width: 950px) {
+  footer {
     width: 95%;
-  }
-  main .section1 {
-    width: 90%;
   }
 }
-@media screen and (max-width: 850px) {
-  header .header-content h1 {
-    font-size: 3rem;
-    letter-spacing: 3px;
-  }
-  header .header-content p {
-    width: 95%;
-    margin: 30px auto 45px;
-  }
-  header nav {
-    width: 95%;
-    padding: 0 10px;
-  }
-  header nav .nav-left li {
-    padding: 0 8px;
-  }
-  header nav .nav-right {
-    width: 35%;
-    min-width: 160px;
-  }
-  main .section1 p {
-    width: 85%;
-  }
-  main .section2 {
-    grid-template-columns: 1fr;
-  }
-  main .section2 .left-part {
-    border-right: none;
-    border-bottom: 1px solid rgb(209, 209, 209);
-  }
-  main .section2 .left-part, main .section2 .right-part {
-    padding: 40px;
-  }
+@media screen and (max-width: 768px) {
   footer {
     grid-template-columns: 1fr;
+  }
+  footer form {
+    padding: 40px 20px;
   }
   footer .infos-contact {
     border-left: none;
     border-top: 1px solid rgb(209, 209, 209);
   }
-}
-@media screen and (max-width: 550px) {
-  header .header-content h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-  header nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.25);
-  }
-  header nav ul {
-    margin: 10px 0;
-  }
-  header nav .nav-left {
-    flex-direction: column;
-    width: 100%;
-  }
-  header nav .nav-left li {
-    width: 100%;
-    padding: 12px 0;
-  }
-  header nav .nav-right {
-    width: 100%;
-    margin: 0;
-    justify-content: center;
-    gap: 20px;
-  }
-  main .section1 span:before, main .section1 span:after {
-    width: 20%;
-  }
-  main .section1 h2 {
-    font-size: 1.8rem;
-  }
-  main .section1 p {
-    width: 95%;
-  }
-  main .section2 .left-part, main .section2 .right-part {
-    padding: 30px 20px;
-  }
-  footer form {
-    padding: 30px 20px;
-  }
   footer .infos-contact div {
+    padding: 20px;
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 20px;
   }
   footer .infos-contact div h3 {
     padding-left: 0;
@@ -434,34 +452,8 @@ footer .infos-contact .social ul li {
   }
   footer .infos-contact .social ul {
     justify-content: center;
-    margin-top: 15px;
   }
   footer .infos-contact .social ul li {
-    margin: 0 6px;
-  }
-}
-@media screen and (max-width: 400px) {
-  header .header-content h1 {
-    font-size: 1.5rem;
-  }
-  header .header-content span {
-    height: 45px;
-    width: 45px;
-  }
-  .btn {
-    width: 140px;
-    height: 40px;
-    font-size: 0.65rem;
-  }
-  main .section1 span {
-    padding: 50px 0;
-  }
-}
-@supports (-webkit-touch-callout: none) {
-  header {
-    min-height: -webkit-fill-available;
-  }
-  header .header-content {
-    min-height: -webkit-fill-available;
+    margin: 0 8px;
   }
 }/*# sourceMappingURL=index.css.map */

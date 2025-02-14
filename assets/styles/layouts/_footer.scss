@@ -81,3 +81,47 @@ footer{
         }
     }
 }
+// À ajouter à la fin de _footer.scss
+@media screen and (max-width: 950px) {
+    footer {
+      width: 95%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    footer {
+      grid-template-columns: 1fr;
+      
+      form {
+        padding: 40px 20px;
+      }
+      
+      .infos-contact {
+        border-left: none;
+        border-top: 1px solid $grey1;
+        
+        div {
+          padding: 20px;
+          grid-template-columns: 1fr;
+          text-align: center;
+          
+          h3 {
+            padding-left: 0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            text-align: center;
+          }
+        }
+        
+        .social ul {
+          justify-content: center;
+          
+          li {
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }

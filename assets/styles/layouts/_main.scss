@@ -84,4 +84,70 @@ img {
 }
 }
 
-   
+   // À ajouter à la fin de _main.scss
+@media screen and (max-width: 950px) {
+    main {
+      width: 95%;
+      
+      .section1 {
+        width: 90%;
+        h2 {
+          font-size: 2.5rem;
+        }
+        p {
+          width: 80%;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    main {
+      .section1 {
+        width: 95%;
+        
+        span:before, span:after {
+          width: 25%;
+        }
+        
+        h2 {
+          font-size: 2rem;
+        }
+        
+        p {
+          width: 90%;
+        }
+      }
+      
+      .section2 {
+        grid-template-columns: 1fr;
+        
+        .left-part {
+          border-right: none;
+          border-bottom: 1px solid $grey1;
+        }
+        
+        .left-part, .right-part {
+          padding: 40px 20px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    main {
+      .section1 {
+        span {
+          padding: 40px 0;
+          
+          &:before, &:after {
+            width: 20%;
+          }
+        }
+        
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }

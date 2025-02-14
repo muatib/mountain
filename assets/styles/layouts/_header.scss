@@ -104,3 +104,72 @@ span{
         }
     }
 }
+
+// À ajouter à la fin de _header.scss
+@media screen and (max-width: 950px) {
+    header {
+      nav {
+        width: 95%;
+      }
+      .header-content {
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          width: 95%;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        background: rgba(255, 255, 255, 0.25);
+        
+        .nav-left {
+          flex-direction: column;
+          width: 100%;
+          
+          li {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            height: auto;
+          }
+        }
+        
+        .nav-right {
+          width: 100%;
+          justify-content: center;
+          margin: 15px 0;
+          gap: 25px;
+        }
+      }
+      
+      .header-content {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header {
+      .header-content {
+        h1 {
+          font-size: 2rem;
+          letter-spacing: 3px;
+        }
+        
+        span {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
